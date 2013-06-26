@@ -17,6 +17,7 @@ namespace Tyrion.Server
             string mp3 = "";
             MusicDirectoryTraverse(@"D:\Music");
             DirectoryInfo dir = new DirectoryInfo(path);
+            var fi = dir.GetFiles().FirstOrDefault(fd=>fd.Name.Contains("Crush"));
             foreach (var file in dir.GetFiles())
             {
                 if (file.Name.Contains("Crush"))
